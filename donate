@@ -1,0 +1,211 @@
+<!DOCTYPE html> 
+<html> 
+<head>  
+    <link href="https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoC1CzjsGyI.woff2" rel="stylesheet" type="font/woff2"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+
+<style> 
+  body, html { 
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
+    overflow: hidden;
+  } 
+
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  body { 
+    font-family: "Ubuntu", sans-serif; 
+    color: white;
+  } 
+
+  .container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 20px;   
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; 
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  h1 { 
+    font-family: Arial, sans-serif; 
+    font-size: 36px; 
+    margin-top: 20px;
+    background: linear-gradient(90deg, #000, #fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textAnimation 5s ease infinite;
+  } 
+
+  @keyframes textAnimation {
+    0%, 100% { color: black; }
+    50% { color: white; }
+  }
+
+  .button { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 200px; 
+    height: 50px; 
+    border: none; 
+    border-radius: 10px; 
+    margin: 10px; 
+    font-family: Arial, sans-serif; 
+    font-size: 18px; 
+    color: white; 
+    cursor: pointer; 
+    text-decoration: none;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); 
+  }
+
+  .monobank {
+    background: linear-gradient(to right, #1c1c1c, #494949); 
+  }
+
+  .donationalerts {
+    background: linear-gradient(to right, #FF6600, #FFBB00); 
+  }
+
+  .qiwi {
+    background: linear-gradient(to right, #FF8201, #FF8C00); 
+  }
+
+  .xRocket {
+    background: linear-gradient(to right, #0C9AFC, #5DBEF1); 
+  }
+
+  .yoomoney {
+    background: linear-gradient(to right, #8B3EFC, #B585FF); 
+  }
+
+  .cryptobot {
+    background: linear-gradient(to right, #2F8DD3, #61C4EE); 
+  }
+
+  .ozon {
+    background: linear-gradient(to right, #2F8DD3, #61C4EE); 
+  }
+
+  .ton {
+    background: linear-gradient(to right, #2A6489, #44B5F5); 
+  }
+
+  .bitcoin {
+    background: linear-gradient(to right, #f7b733, #fc4a1a); 
+  }
+
+  .usdt {
+    background: linear-gradient(to right, #26a17b, #4caf50); 
+  }
+
+  .ethereum {
+    background: linear-gradient(to right, #8e2de2, #4a00e0); 
+  }
+
+  .litecoin {
+    background: linear-gradient(to right, #6a82fb, #fc5c7d); 
+  }
+
+  .bnb {
+    background: linear-gradient(to right, #f3ba2f, #f5a623); 
+  }
+
+  .text { 
+    color: white; 
+  } 
+
+  .icon { 
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    margin-right: 10px; 
+  } 
+
+</style> 
+
+<script> 
+function copyText(message, textToCopy) { 
+    var dummy = document.createElement("textarea"); 
+    document.body.appendChild(dummy); 
+    dummy.value = textToCopy; 
+    dummy.select(); 
+    document.execCommand("copy"); 
+    document.body.removeChild(dummy); 
+    alert(message); 
+} 
+</script> 
+
+</head> 
+<body> 
+  <!-- Video Background -->
+  <video id="video-background" autoplay muted loop>
+    <source src="ivan_krutoy_pc.mp4" type="video/mp4" media="(min-width: 768px)">
+    <source src="ivan_krutoy_mobile.mp4" type="video/mp4" media="(max-width: 767px)">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container"> 
+    <h1>DONATE:3</h1> 
+
+    <div class="group"> 
+      <p class="text">Украина</p> 
+      <a class="button monobank" href=""><i class="icon fas fa-credit-card"></i>Monobank</a> 
+    </div> 
+
+    <div class="group"> 
+      <p class="text">Россия / СНГ</p> 
+      <a class="button donationalerts" href="https://www.donationalerts.com/r/woxii"><i class="icon fas fa-bell"></i>DonationAlerts</a> 
+
+      <a class="button qiwi" href=""><i class="icon fas fa-wallet"></i>QIWI</a> 
+
+      <a class="button yoomoney" href=""><i class="icon fas fa-money-check-alt"></i>YooMoney</a> 
+
+      <a class="button ozon" href=""><i class="icon fas fa-credit-card"></i>Ozon Банк</a> 
+
+    </div> 
+
+    <div class="group"> 
+      <p class="text">Crypto</p> 
+      <a class="button xRocket" href="http://t.me/xrocket?start=inv_lLc25GzzR6AzmvK"><i class="icon fas fa-robot"></i>xRocket [USDT]</a> 
+
+      <a class="button cryptobot" href="http://t.me/send?start=IVpansa1qaBt"><i class="icon fas fa-robot"></i>Crypto Bot</a> 
+
+      <button class="social-row button usdt" onclick="copyText('USDT (TRC20) Address copied to clipboard!', 'TWPjD8anNJ2HDB7bGQkbZr7MQz6X5zxL7K')"><i class="fas fa-dollar-sign"></i>USDT (TRC20)</button>
+
+      <button class="social-row button ton" onclick="copyText('TON Address copied to clipboard! ‼️НА ДАННЫЙ АДРЕС TON МОЖНО ОТПРАВЛЯТЬ ЛЮБЫЕ ТОКЕНЫ TON [НАПРИМЕР Notcoin, Gram и т.д.] И В ТОМ ЧИСЛЕ TON, НО ЗАПРЕЩЕННО ОТПРАВЛЯТЬ ЛЮБЫЕ ИНЫЕ МОНЕТЫ КРОМЕ TON И TON ТОКЕНОВ‼️', 'UQB79w_f9TzO6roG-5vSvTpHKxe5FRKpIdJCza9oQRrG-6Zy')"><i class="fab fa-sketch"></i>TON</button>
+
+      <button class="social-row button bitcoin" onclick="copyText('Bitcoin Address copied to clipboard!', 'bc1qhf2sxzletu5vk287jp5dhph5uwmgclg5krte6h')"><i class="fab fa-bitcoin"></i>Bitcoin</button>
+
+      <button class="social-row button ethereum" onclick="copyText('Ethereum (ERC20) Address copied to clipboard!', '0x680B35983a4C1fBA1CB68aB85FB165368dADF6ED')"><i class="fab fa-ethereum"></i>Ethereum (ERC20)</button>
+
+      <button class="social-row button litecoin" onclick="copyText('Litecoin Address copied to clipboard!', 'ltc1qwxupss8pt778yl452kjpw8m78rfz4xzgzruuym')"><i class="fab fa-bandcamp"></i>Litecoin</button>
+
+      <button class="social-row button bnb" onclick="copyText('BNB (BEP20) Address copied to clipboard!', '0x7C53b8f833bD3B1F263E5cef6f802699F30aC729')"><i class="fab fa-btc"></i>BNB (BEP20)</button>
+
+    </div> 
+  </div> 
+</body> 
+</html>
