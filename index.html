@@ -1,582 +1,525 @@
 <!DOCTYPE html>
-<html><head>
-    <title></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta charset="utf-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>woxii</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background: linear-gradient(#000000 30%, #6d14b8 100%); 
-    user-select: none;
-    background-attachment: fixed;
-    overflow-y: hidden;
-}
-
-section {
-    position: fixed;
-    background-color: #18092e; 
-    border: 1px solid #6d14b8; 
-    padding: 20px;
-    text-align: center;
-    width: 300px; 
-    color: #ffffff; 
-    border-radius: 10px; 
-    font-family: 'Ubuntu', sans-serif;
-    animation: fadeIn 1s ease-in-out; 
-}
-
-.social-button {
-display: block;
-width: 100px;
-height: 50px;
-margin-bottom: 10px;
-}
-
-.social-button {
-    margin: 5px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 150px;
-    width: 100%;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.social-row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    animation: slideInLeft 1s ease-in-out; 
-    top: -59px;
-}
-
-.donate-row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-    animation: slideInLeft 1s ease-in-out; 
-}
-
-.social-button {
-display: block;
-width: 100px;
-height: 20px; 
-margin-bottom: 10px;
-}
-
-.social-button i {
-margin-right: 5px;
-}
-
-.GitHub-button {
-background-color: #6d14b8;
-
-}
-.telegram-button {
-background-color: #29A6DE;
-}
-
-.discord-button {
-background-color: #6073B7;
-}
-
-.steam-button {
-background-color: #1C1D22;
-}
-
-.TikTok-button {
-background: linear-gradient(to right, #1ECDC8, #6652ff, #CC2847);
-}
-
-.Instagram-button {
-background: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-
-.copy-button {
-    background-color: #5d22ff;
-    color: #000000;
-    width: 100%;
-}
-
-img.komaru-gif {
-    border-radius: 50%;
-    margin-top: -15px;
-    width: 200px;
-    height: 200px;
-    animation: rotate 2s linear; 
-    animation-fill-mode: forwards;
-    pointer-events: none; 
-}
-
-.custom-msgbox {
-    background-color: #333;
-    border: 2px solid #ffffff;
-    padding: 20px;
-    text-align: center;
-    width: 400px;
-    color: #ffffff;
-    border-radius: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    display: none;
-    animation: slideInBottom 1s ease-in-out; 
-}
-
-.custom-msgbox.show {
-    display: block;
-}
-
-.custom-msgbox h2 {
-    margin-bottom: 10px;
-}
-
-.custom-msgbox p {
-    margin-bottom: 20px;
-}
-
-.custom-msgbox button {
-    margin: 0 auto;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #0088cc;
-    border: none;
-    cursor: pointer;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.donate-button {
-    background-color: #6d14b8;
-    color: #ffffff;
-    padding: 10px 40px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    animation: pulse 2s infinite;
-}
-
-
-.donate-button {
-text-decoration: none;
-color: white;
-background: purple;
-padding: 10px 30px;
-border-radius: 25px;
-font-weight: normal;
-text-transform: uppercase;
-transition: all 0.2s ease-in-out;
-}
-
-.GitHub-button:hover {
-color: white;
-box-shadow: 0 5px 15px #ffc5ff;
-
-}
-
-.telegram-button:hover {
-color: white;
-box-shadow: 0 5px 15px #ffc5ff;
-}
-
-.discord-button:hover {
-color: white;
-box-shadow: 0 5px 15px #ffc5ff;
-}
-
-.steam-button:hover {
-color: white;
-box-shadow: 0 5px 15px #ffc5ff;
-
-}
-
-.Instagram-button:hover {
-color: white;
-box-shadow: 0 5px 15px #ffc5ff;
-}
-
-.TikTok-button:hover {
-color: white;
-box-shadow: 0 5px 15px #ffc5ff;
-}
-
-
-.donate-button i {
-    margin-right: 5px;
-}
-
-.donate-button:hover {
-color: white;
-box-shadow: 0 5px 15px #ffc5ff;
-}
-
-.donate-row {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.donation-image {
-    margin-top: 10px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; 
-}
-
-
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInBottom {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes fadeInUp {
-0% {
-opacity: 0;
-transform: translateY(-20px);
-}
-100% {
-opacity: 1;
-transform: translateY(0);
-}
-}
-
-.social-button {
-animation: fadeInUp 0.8s ease-in-out;
-opacity: 0; 
-transform: translateY(-20px); 
-animation-fill-mode: forwards; 
-}
-
-
-.GitHub-button {
-animation-delay: 0.2s;
-}
-
-.telegram-button {
-animation-delay: 0.4s;
-}
-
-.discord-button {
-animation-delay: 0.6s;
-}
-.TikTok-button {
-animation-delay: 0.8s;
-}
-
-.Instagram-button {
-animation-delay: 1s;
-}
-
-.steam-button {
-animation-delay: 1.2s;
-}
-container {
-width: 600px;
-height: 200px;
-margin: 0 auto;
-font-family: monospace;
-font-size: 20px;
-color: #ffffff;
-background-color: #000000;
-}
-
-#cursor {
-display: inline-block;
-width: 3px;
-height: 20px;
-margin-left: -5px;  
-background-color: #ffffff;
-animation: blink 0.5s infinite;
-}
-
-@keyframes blink {
-0% { opacity: 1; }
-50% { opacity: 0; }
-100% { opacity: 1; }
-}
-
-.donate-button {
-background-color: #6d14b8;
-border-radius: 60px;
-border: none;
-color: #eeeeee;
-cursor: pointer;
-display: inline-block;
-font-family: sans-serif;
-font-size: 20px;
-padding: 10px 10px;
-text-align: center;
-text-decoration: none;
-}
-
-
-.donate-section {
-position: absolute;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
-width: 444px;
-height: 150px;
-background-color: #6d14b8;
-border-radius: 10px;
-box-shadow: 0 0 10px #ffffff;
-display: flex;
-justify-content: center;
-align-items: center;
-font-family: sans-serif;
-font-size: 24px;
-color: #6d14b8;
-opacity: 0;
-visibility: hidden;
-transition: all 0.5s ease-in-out;
-}
-
-.show-donate-section {
-bottom: 100px;
-opacity: 1;
-visibility: visible;
-}
-
-
-.donate-tab {
-position: absolute;
-top: 10px;
-right: 10px;
-width: 80px;
-height: 40px;
-background-color: #6d14b8;
-border-radius: 10px;
-color: #eeeeee;
-font-size: 18px;
-text-align: center;
-line-height: 40px;
-cursor: pointer;
-
-}
-
-.button-container {
-display: flex;
-width: 100%;
-}
-
-
-
-#social-wor {
-display: block; 
-}
-
-.button-container {
-display: flex; 
-justify-content: center; 
-}
-
-.social-cryptobot, .social-monobank {
-border: none; 
-padding: 20px 10px;
-margin: 30px 20px; 
-border-radius: 4px;
-font-size: 16px; 
-cursor: pointer; 
-position: relative;
-bottom: 0px; 
-width: 280px;
-left: 0px;
-text-decoration: none;
-transition: transform 0.3s ease-in-out;
-display: flex;
-justify-content: center;
-align-items: center;
-color: #ffffff;
-}
-
-.social-cryptobot {
-background-image: linear-gradient(#60E4FF, #00ACCE);
-}
-
-.social-monobank {
-background-image: linear-gradient(#41444D, #1C1D22);
-color: white; 
-}
-
-.social-cryptobot:hover, .social-monobank:hover {
-transform: scale(1.05);
-}
-
-
-
-
-
-
-.text {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-size: 36px;
-opacity: 0;
-animation: fade-in-up 3s forwards;
-color: #ffffff
-}
-
-@keyframes fade-in-up {
-0% {
-opacity: 0;
-transform: translate(-50%, -50%);
-}
-50% {
-opacity: 1;
-transform: translate(-50%, -50%);
-}
-100% {
-opacity: 0;
-transform: translate(-50%, -150%);
-}
-}
-
-
-h10 {
-position: fixed;
-bottom: 0px;
-right: 0px;
-color: #18043171;
-}
-
-@media (max-width: 800px) {
-    section {
-        min-height: 100px;
-        width: auto;
-        max-width: 740px; 
-    }
-
-    .donate-section {
-        min-width: 280px;
-        width: auto;
-    }
-    }
-
-
+            background: linear-gradient(135deg, #1a1a1a, #121212);
+            color: #e0e0e0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 1000px;
+            position: relative;
+        }
+
+        .ash-global {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .ash {
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+            animation-name: floatUp;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .ash {
+            background: #ffffff;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-120vh);
+                opacity: 0;
+            }
+        }
+
+        .bio-container, .donation-container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            z-index: 2;
+            animation: fadeIn 1.5s ease-in-out;
+            user-select: none;
+            margin-top: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .donation-container {
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .border-glow {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            pointer-events: none;
+            z-index: 3;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            will-change: transform;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+        }
+
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: titlePulse 1.5s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(45deg, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .role {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 2;
+            font-weight: 700;
+        }
+
+        .donate-section {
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .donate-link {
+            font-size: 0.9em;
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 15px;
+            text-align: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+            height: 100px; 
+        }
+
+
+        .donate-link:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .donate-link i {
+            font-size: 1.5em;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+            position: relative;
+            z-index: 2;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            font-size: 0.9em;
+            color: #e0e0e0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-weight: 700;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.5em;
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: scale(1.2);
+        }
+
+        @keyframes titlePulse {
+            0%   { transform: scale(1); }
+            50%  { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 600px) {
+            .bio-container, .donation-container {
+                width: 95%;
+                padding: 10px;
+            }
+            .social-links, .donate-section {
+                grid-template-columns: 1fr;
+            }
+            .social-link, .donate-link {
+                justify-content: center;
+                padding: 10px;
+                font-size: 0.8em;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            .role {
+                font-size: 1em;
+            }
+            .profile-image {
+                width: 80px;
+                height: 80px;
+            }
+            .donate-link i {
+                font-size: 1.2em;
+            }
+            .back-button {
+                font-size: 1.2em;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            background: transparent;
+        }
+
+        html {
+            scrollbar-width: none;
+        }
+
+        body {
+            overflow: auto;
+        }
+
+        .donate-link.cryptobot {
+            background-color: rgb(0, 137, 216);
+            border-color: rgb(0, 137, 216);
+        }
+
+        .donate-link.monobank {
+            background-color: rgb(52, 58, 64);
+            border-color: rgb(52, 58, 64);
+        }
+
+        .donate-link.donationalerts {
+            background-color: #191919;
+            border-color: #191919;
+        }
+
+        .donate-link.tonkeeper {
+            background-color: rgb(29, 38, 51);
+            border-color: rgb(29, 38, 51);
+        }
+
+        .donate-link.yoomoney {
+            background-color: rgb(139,63,252);
+            border-color: rgb(139,63,252);
+        }
+
+        .donate-link.ozon {
+            background-color: rgb(0, 153, 255);
+            border-color: rgb(0, 153, 255);
+        }
+
+        .donate-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .donate-link .soon {
+            display: block;
+            margin-top: 4px;
+            font-size: 12px;
+            color: gray;
+        }
+
+        .gif-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            border: none;
+        }
     </style>
-<script> 
-function toggleSocialRow() {
-    var x = document.getElementById("cryptoOptions");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
-</script>
-<script>
-function toggleSocialRow() {
-var donateSection = document.querySelector(".donate-section");
-if (donateSection.classList.contains("show-donate-section")) {
-donateSection.classList.remove("show-donate-section");
-donateSection.style.backdropFilter = "none"; 
-donateSection.style.backgroundColor = "rgba(255, 255, 255, 1)";
-} else {
-donateSection.classList.add("show-donate-section");
-donateSection.style.backdropFilter = "blur(5px)"; 
-donateSection.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
-}
-}
-
-function closeSocialRow() {
-var donateSection = document.querySelector(".donate-section");
-donateSection.classList.remove("show-donate-section");
-donateSection.style.backdropFilter = "none";
-donateSection.style.backgroundColor = "rgba(255, 255, 255, 1)";
-}
-</script>
 </head>
 <body>
-    <section>
-        <img src="aaron_lubimy.jpg" alt="Donate Image" class="donation-image">
-        <h1>woxii bio:3</h1>
-        <div class="social-wor">
-            <div class="social-row">
-                <a href="" class="social-button GitHub-button"><i class="fab fa-github"></i>GitHub</a>
-            </div>
-            <div class="social-row">
-                <a href="https://t.me/woxii" class="social-button telegram-button"><i class="fab fa-telegram"></i>Telegram</a>
-                <a href="" class="social-button discord-button"><i class="fab fa-discord"></i>Discord</a>
-            </div>
-           
-            <div class="social-row">
-                <a href="https://www.tiktok.com/@MS4wLjABAAAAISsFAObmXNGoSYJF7uBhnljebl1rSdPLXoNyeKER9OoU1gn6iB4o8r3kPPzhqNTN" class="social-button TikTok-button"><i class="fab fa-tiktok"></i>TikTok</a>
-                <a href="https://a9fm.github.io/lightshot" class="social-button Instagram-button"><i class="fab fa-instagram"></i>Instagram</a>
-            </div>
-            <div class="social-row">
-                <a href="https://steamcommunity.com/profiles/76561199618341466/" class="social-button steam-button"><i class="fab fa-steam-symbol"></i>Steam</a>
-            </div>
+    <div class="ash-global"></div>
+    <div class="bio-container">
+        <div class="border-glow"></div>
+        <div class="glow-effect"></div>
+        <div class="profile-image">
+            <img src="avatar.png" alt="Profile Image">
         </div>
-        <button class="donate-button" onclick="window.location.href='https://woxiii.github.io/donate';">
-            <i class="fas fa-donate"></i> Donate
+        <h1 id="typing-text">woxii⁴²</h1>
+        <div class="role">*описание*</div>
+        <div class="donate-section">
+            <a href="https://nohello.net" class="social-link" aria-label="NoHello" target="_blank">
+                <i class="fas fa-link"></i>
+                <span>NoHello.net</span>
+            </a>
+            <button class="social-link" onclick="toggleContainers()" aria-label="Donate">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>Donate</span>
+            </button>
         </div>
-    </section>
-          </div>
-          <div class="social-button">
-           <div class="social-row">
-         </div>
-</div>
+        <div class="social-links">
+            <a href="https://t.me/woxii" class="social-link" target="_blank" aria-label="Telegram">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+            </a>
+            <a href="https://www.tiktok.com/@MS4wLjABAAAAISsFAObmXNGoSYJF7uBhnljebl1rSdPLXoNyeKER9OoU1gn6iB4o8r3kPPzhqNTN" class="social-link" target="_blank" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+                <span>TikTok</span>
+            </a>
+            <a href="https://steamcommunity.com/profiles/76561199618341466" class="social-link" target="_blank" aria-label="Steam">
+                <i class="fab fa-steam"></i>
+                <span>Steam</span>
+            </a>
+        </div>
+    </div>
+    <div class="donation-container">
+        <div class="border-glow"></div>
+        <div class="glow-effect"></div>
+        <div class="gif-container">
+            <img src="https://tinypic.host/images/2025/02/19/7IUq.gif" alt="GIF">
+        </div>
+        <i class="fas fa-arrow-left back-button" onclick="toggleContainers()" aria-label="Back"></i>
+        <div class="donate-section">
+            <a href="https://t.me/send?start=IV0ppYc2sSGr" class="donate-link cryptobot" target="_blank">
+                <img src="cb.png"  style="width: 40%; height: auto;">
+                <span><strong>@cryptobot</strong></span>
+            </a>
+            <button class="donate-link tonkeeper" onclick="copyAddress()" aria-label="Copy Address">
+                <img src="tk.png"  style="width: 30%; height: auto;">
+                <span><strong>Tonkeeper</strong></span>
+            </button>
+            <a href="https://www.donationalerts.com/r/cppsharp" class="donate-link donationalerts" target="_blank" aria-label="DonationAlerts">
+                <img src="DA_Alert_Color.png"  style="width: 20%; height: auto;">
+                <span><strong>DonationAlerts</strong></span>
+            </a>
+            <a href="https://monobank.ua" class="donate-link monobank" target="_blank" aria-label="Monobank">
+                <img src="mb.png" style="width: 30%; height: auto;">
+                <span>Monobank</span>
+            </a>
+            <a href="https://yoomoney.ru/" class="donate-link yoomoney" target="_blank" aria-label="YooMoney">
+                <img src="Yoo.png" style="width: 50%; height: auto;">
+                <span><strong>YooMoney</strong></span>
+            </a>
+            <a href="https://www.ozon.ru/" class="donate-link ozon" target="_blank" aria-label="Ozon">
+                <img src="ozon.png" style="width: 70%; height: auto;">
+            </a>
+        </div>
+    </div>
 
-    </section>
+    <script>
+        const ashCount = 30;
+        const ashGlobalContainer = document.querySelector('.ash-global');
 
-    <h10>don't click on instagram</h10>    
-</body></html>
+        function createParticles(container, className, count) {
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add(className);
+                const size = Math.random() * 3 + 2;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                const leftPos = Math.random() * 100;
+                particle.style.left = leftPos + '%';
+                const duration = Math.random() * 5 + 5;
+                particle.style.animationDuration = duration + 's';
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = delay + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        createParticles(ashGlobalContainer, 'ash', ashCount);
+
+        function toggleContainers() {
+            const bioContainer = document.querySelector('.bio-container');
+            const donationContainer = document.querySelector('.donation-container');
+
+            if (bioContainer.style.display === 'none') {
+                bioContainer.style.display = 'block';
+                donationContainer.style.display = 'none';
+                history.pushState({ page: 'bio' }, 'Bio', '#bio');
+            } else {
+                bioContainer.style.display = 'none';
+                donationContainer.style.display = 'block';
+                history.pushState({ page: 'donate' }, 'Donate', '#donate');
+            }
+        }
+
+        function copyAddress() {
+            const address = 'Your Tonkeeper Address Here';
+            navigator.clipboard.writeText(address).then(() => {
+                alert('Address copied to clipboard!');
+            });
+        }
+
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+        document.addEventListener('copy', (e) => {
+            e.preventDefault();
+        });
+
+        const typingText = document.getElementById('typing-text');
+        const text = typingText.innerText;
+        typingText.innerText = '';
+
+        let index = 0;
+        function type() {
+            if (index < text.length) {
+                typingText.innerText += text.charAt(index);
+                index++;
+                setTimeout(type, 150);
+            }
+        }
+
+        type();
+
+        window.addEventListener('popstate', (event) => {
+            if (location.hash === '#bio') {
+                document.querySelector('.bio-container').style.display = 'block';
+                document.querySelector('.donation-container').style.display = 'none';
+            } else if (location.hash === '#donate') {
+                document.querySelector('.bio-container').style.display = 'none';
+                document.querySelector('.donation-container').style.display = 'block';
+            }
+        });
+
+        window.addEventListener('load', () => {
+            if (location.hash === '#bio') {
+                document.querySelector('.bio-container').style.display = 'block';
+                document.querySelector('.donation-container').style.display = 'none';
+            } else if (location.hash === '#donate') {
+                document.querySelector('.bio-container').style.display = 'none';
+                document.querySelector('.donation-container').style.display = 'block';
+            }
+        });
+
+    </script>
+</body>
+</html>
