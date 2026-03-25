@@ -509,11 +509,10 @@
                 document.querySelector('.donation-container').style.display = 'block';
             }
         });
-
-        // Copy text to clipboard when Tonkeeper image is clicked
+
         const tonkeeperLink = document.getElementById('tonkeeper-link');
         tonkeeperLink.addEventListener('click', () => {
-            const textToCopy = 'UQB79w_f9TzO6roG-5vSvTpHKxe5FRKpIdJCza9oQRrG-6Zy'; // Replace with the text you want to copy
+            const textToCopy = 'UQB79w_f9TzO6roG-5vSvTpHKxe5FRKpIdJCza9oQRrG-6Zy'; 
             navigator.clipboard.writeText(textToCopy).then(() => {
                 alert('Text copied to clipboard!');
             }).catch(err => {
